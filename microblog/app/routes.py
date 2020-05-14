@@ -9,8 +9,8 @@ from app.forms import (
 )
 from app.models import Post, User
 from datetime import datetime
-from flask import flash, redirect, render_template, request, url_for
-from flask_babel import _
+from flask import flash, g, redirect, render_template, request, url_for
+from flask_babel import _, get_locale
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 
@@ -141,6 +141,7 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
+    g.get_locale = str(get_locale())
 
 
 @app.route("/edit_profile", methods=["GET", "POST"])
