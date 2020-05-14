@@ -16,3 +16,4 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     ADMINS = ["tim.condit@skillfox.com"]
     POSTS_PER_PAGE = 10
+    LANGUAGES = ["en", "es"]
