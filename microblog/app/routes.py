@@ -34,7 +34,7 @@ def index():
     prev_url = url_for("index", page=posts.prev_num) if posts.has_prev else None
     return render_template(
         "index.html",
-        title=_("Home Page"),
+        title=_("Home"),
         form=form,
         posts=posts.items,
         next_url=next_url,
@@ -57,7 +57,7 @@ def login():
         if not next_page or url_parse(next_page).netloc != "":
             next_page = url_for("index")
         return redirect(next_page)
-    return render_template("login.html", title=_("Sign In"), form=form)
+    return render_template("login.html", title=_("Sign in"), form=form)
 
 
 @app.route("/logout")
@@ -116,7 +116,7 @@ def reset_password_request():
         flash(_("Check your email for the instructions to reset your password"))
         return redirect(url_for("login"))
     return render_template(
-        "reset_password_request.html", title=_("Reset Password"), form=form
+        "reset_password_request.html", title=_("Reset your password"), form=form
     )
 
 
@@ -156,7 +156,7 @@ def edit_profile():
     elif request.method == "GET":
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template("edit_profile.html", title=_("Edit Profile"), form=form)
+    return render_template("edit_profile.html", title=_("Edit profile"), form=form)
 
 
 @app.route("/follow/<username>")
@@ -187,7 +187,7 @@ def unfollow(username):
         return redirect(url_for("user", username=username))
     current_user.unfollow(user)
     db.session.commit()
-    flash(_("You are not following %(username)s!", username=username))
+    flash(_("You are not following %(username)s.", username=username))
     return redirect(url_for("user", username=username))
 
 
