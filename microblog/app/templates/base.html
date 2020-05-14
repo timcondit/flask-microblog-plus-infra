@@ -2,7 +2,7 @@
 
 {% block title %}
   {% if title %}
-    {{ _(%(title), title=title) }} {{ _('- Microblog') }}
+    {{ _('%(title)s', title=title) }} {{ _('- Microblog') }}
   {% else %} {{ _('Welcome to Microblog') }}
   {% endif %}
 {% endblock %}

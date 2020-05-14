@@ -148,7 +148,7 @@ def follow(username):
 def unfollow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash(_("User %(username) not found.", username=username)
+        flash(_("User %(username) not found.", username=username))
         return redirect(url_for("index"))
     if user == current_user:
         flash(_("You cannot unfollow yourself!"))
