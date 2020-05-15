@@ -1,20 +1,18 @@
-from app import app, db
-from app.email import send_password_reset_email
-from app.forms import (
-    EditProfileForm,
-    LoginForm,
-    PostForm,
-    RegistrationForm,
-    ResetPasswordRequestForm,
-)
-from app.models import Post, User
-from app.translate import translate
 from datetime import datetime
-from flask import flash, g, jsonify, redirect, render_template, request, url_for
+
+from flask import (flash, g, jsonify, redirect, render_template, request,
+                   url_for)
 from flask_babel import _, get_locale
 from flask_login import current_user, login_required, login_user, logout_user
 from guess_language import guess_language
 from werkzeug.urls import url_parse
+
+from app import app, db
+from app.email import send_password_reset_email
+from app.forms import (EditProfileForm, LoginForm, PostForm, RegistrationForm,
+                       ResetPasswordRequestForm)
+from app.models import Post, User
+from app.translate import translate
 
 
 @app.route("/", methods=["GET", "POST"])

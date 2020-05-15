@@ -1,7 +1,8 @@
-from app import app
+import os
 
 import click
-import os
+
+from app import app
 
 
 @app.cli.group()

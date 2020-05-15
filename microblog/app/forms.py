@@ -1,8 +1,11 @@
-from app.models import User
 from flask_babel import lazy_gettext as _l
 from flask_wtf import FlaskForm
-from wtforms import BooleanField, PasswordField, StringField, SubmitField, TextAreaField
-from wtforms.validators import DataRequired, Email, EqualTo, Length, ValidationError
+from wtforms import (BooleanField, PasswordField, StringField, SubmitField,
+                     TextAreaField)
+from wtforms.validators import (DataRequired, Email, EqualTo, Length,
+                                ValidationError)
+
+from app.models import User
 
 
 class LoginForm(FlaskForm):
