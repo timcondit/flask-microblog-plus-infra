@@ -149,7 +149,7 @@ msgstr "Error: el servicio de traducciones no está configurado."
 
 #: app/translate.py:21
 msgid "Error: the translation service failed."
-msgstr "Error el servicio de traducciones ha fallado."
+msgstr "Error: el servicio de traducciones ha fallado."
 
 #: app/templates/404.html:4
 msgid "File not found"
