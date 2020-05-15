@@ -8,8 +8,9 @@ from app.forms import (
     ResetPasswordRequestForm,
 )
 from app.models import Post, User
+from app.translate import translate
 from datetime import datetime
-from flask import flash, g, redirect, render_template, request, url_for
+from flask import flash, g, jsonify, redirect, render_template, request, url_for
 from flask_babel import _, get_locale
 from flask_login import current_user, login_required, login_user, logout_user
 from guess_language import guess_language
@@ -211,4 +212,18 @@ def explore():
         posts=posts.items,
         next_url=next_url,
         prev_url=prev_url,
+    )
+
+
+@app.route("/translate", methods=["POST"])
+@login_required
+def translate_text():
+    return jsonify(
+        {
+            "text": translate(
+                request.form["text"],
+                request.form["source_language"],
+                request.form["dest_language"],
+            )
+        }
     )
