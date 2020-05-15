@@ -17,4 +17,4 @@ class Config:
     MS_TRANSLATOR_KEY = os.environ.get("MS_TRANSLATOR_KEY")
     ADMINS = ["tim.condit@skillfox.com"]
     POSTS_PER_PAGE = 10
-    LANGUAGES = ["en", "es"]
+    LANGUAGES = ["ar", "de", "en", "es", "fr", "it", "zh-Hans"]
