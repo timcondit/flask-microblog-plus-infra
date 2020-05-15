@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-15 10:49-0700\n"
+"POT-Creation-Date: 2020-05-15 11:04-0700\n"
 "PO-Revision-Date: 2020-05-14 11:57-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -112,8 +112,9 @@ msgid "Your changes have been saved."
 msgstr "Tus cambios han sido salvados."
 
 #: app/routes.py:165 app/templates/edit_profile.html:5
-msgid "Edit profile"
-msgstr "Editar perfil"
+#: app/templates/user.html:16
+msgid "Edit your profile"
+msgstr "Editar tu perfil"
 
 #: app/routes.py:173 app/routes.py:189
 #, python-format
@@ -144,11 +145,11 @@ msgstr "Explorar"
 
 #: app/translate.py:11
 msgid "Error: the translation service is not configured."
-msgstr ""
+msgstr "Error: el servicio de traducciones no está configurado."
 
 #: app/translate.py:21
 msgid "Error: the translation service failed."
-msgstr ""
+msgstr "Error el servicio de traducciones ha fallado."
 
 #: app/templates/404.html:4
 msgid "File not found"
@@ -168,7 +169,7 @@ msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
 
 #: app/templates/_post.html:9
 msgid "Translate"
-msgstr ""
+msgstr "Traducir"
 
 #: app/templates/_post.html:24
 #, python-format
@@ -192,8 +193,8 @@ msgid "Logout"
 msgstr "Salir"
 
 #: app/templates/base.html:67
-msgid "Error: Could not contact server."
-msgstr ""
+msgid "Error: could not contact server."
+msgstr "Error: el servidor no pudo ser contactado."
 
 #: app/templates/index.html:5
 #, python-format
@@ -226,29 +227,25 @@ msgstr "Haz click aquí para pedir una nueva"
 
 #: app/templates/user.html:11
 msgid "Last seen on"
-msgstr ""
+msgstr "Última visita"
 
 #: app/templates/user.html:13
 #, python-format
 msgid "%(followers)d followers"
-msgstr ""
+msgstr "%(followers)d seguidores"
 
 #: app/templates/user.html:14
 #, python-format
-msgid "%(following)d following."
-msgstr ""
-
-#: app/templates/user.html:16
-msgid "Edit your profile"
-msgstr ""
+msgid "%(following)d following"
+msgstr "siguiendo a %(following)d"
 
 #: app/templates/user.html:19
 msgid "Follow"
-msgstr ""
+msgstr "Seguir"
 
 #: app/templates/user.html:22
 msgid "Unfollow"
-msgstr ""
+msgstr "Dejar de seguir"
 
 #~ msgid "Repeat Password"
 #~ msgstr "Repetir contraseña"
@@ -318,4 +315,16 @@ msgstr ""
 
 #~ msgid "Unfollow"
 #~ msgstr "Dejar de seguir"
+
+#~ msgid "Edit profile"
+#~ msgstr "Editar perfil"
+
+#~ msgid "Error: Could not contact server."
+#~ msgstr "Error: el servidor no pudo ser contactado."
+
+#~ msgid "%(following)d following"
+#~ msgstr "siguiendo a %(following)d"
+
+#~ msgid "%(following)d following."
+#~ msgstr ""
 
