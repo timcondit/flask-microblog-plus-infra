@@ -1,4 +1,8 @@
 <table class="table table-hover">
+  {% if post.language and post.language != g.locale %}
+    <br/><br/>
+    <a hread="#">{{ _('Translate') }}</a>
+  {% endif %}
   <tr>
     <td width="70px">
       <a href="{{ url_for('user', username=post.author.username) }}">
