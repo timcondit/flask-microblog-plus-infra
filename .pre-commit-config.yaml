@@ -1,3 +1,6 @@
+# based on this Medium post
+# https://bit.ly/3bHeJsE
+
 repos:
 -   repo: https://github.com/asottile/seed-isort-config
     rev: v2.1.1
@@ -16,6 +19,3 @@ repos:
     rev: v2.5.0
     hooks:
     - id: flake8
-
-# based on 
-# https://medium.com/staqu-dev-logs/keeping-python-code-clean-with-pre-commit-hooks-black-flake8-and-isort-cac8b01e0ea1
