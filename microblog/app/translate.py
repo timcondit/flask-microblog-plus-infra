@@ -1,9 +1,8 @@
 import json
 
 import requests
-from flask_babel import _
-
 from app import app
+from flask_babel import _
 
 
 # f"https://translator0.cognitiveservices.azure.com/Translate?text={text}&from={source_language}&to={dest_language}",

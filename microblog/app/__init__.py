@@ -2,6 +2,8 @@ import logging
 import os
 from logging.handlers import RotatingFileHandler, SMTPHandler
 
+from app import errors, models, routes
+from config import Config
 from flask import Flask, request
 from flask_babel import Babel
 from flask_babel import lazy_gettext as _l
@@ -11,9 +13,6 @@ from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
-
-from app import errors, models, routes
-from config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
